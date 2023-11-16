@@ -1,0 +1,17 @@
+<!-- products.html -->
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Имя продукта</th>
+        <th>Цена продукта</th>
+        <th>Количество</th>
+    </tr>
+{% for product in products %}
+    <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.product_name }}</td>
+        <td>{{ product.product_price }}</td>
+        <td>{{ product.quantity }}</td>
+    </tr>
+{% endfor %}
+</table>
