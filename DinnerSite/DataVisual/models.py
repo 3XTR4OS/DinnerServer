@@ -2,8 +2,9 @@ from django.db import models
 
 
 class ListProducts(models.Model):
-    product_name = models.CharField(max_length=200)
-    product_price = models.DecimalField(max_digits=5, decimal_places=2)
+    user_id = models.IntegerField()
+    product_name = models.CharField(max_length=255)
+    product_price = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.IntegerField()
 
     class Meta:

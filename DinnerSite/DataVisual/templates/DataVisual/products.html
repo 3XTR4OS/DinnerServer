@@ -1,17 +1,26 @@
 <!-- products.html -->
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Имя продукта</th>
-        <th>Цена продукта</th>
-        <th>Количество</th>
-    </tr>
-{% for product in products %}
-    <tr>
-        <td>{{ product.id }}</td>
-        <td>{{ product.product_name }}</td>
-        <td>{{ product.product_price }}</td>
-        <td>{{ product.quantity }}</td>
-    </tr>
-{% endfor %}
-</table>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список продуктов</title>
+</head>
+<body>
+    <h1>Список продуктов</h1>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.user_id }}</td>
+            <td>{{ product.product_name }}</td>
+            <td>{{ product.product_price }}</td>
+            <td>{{ product.quantity }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
